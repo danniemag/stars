@@ -1,12 +1,19 @@
 class StarsController < ApplicationController
-  before_action :validate_parameter
+  require 'rest-client'
+
+  before_action :no_user_found, if: -> { params[:user].blank? }
 
   def index
+    url = "https://api.github.com/users/#{params[:user]}/repos"
+    response = RestClient.get(url)
+
+  rescue RestClient::NotFound
+    no_user_found
   end
 
   private
 
-  def validate_parameter
+  def no_user_found
     render_response(false, 'No user found', :not_found)
   end
 
