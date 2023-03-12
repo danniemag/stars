@@ -5,7 +5,6 @@
 class CheckStarsJob
   include Sidekiq::Job
   require 'rest-client'
-  require 'byebug'
 
   def perform(user)
     url = "https://api.github.com/users/#{user}/repos"
