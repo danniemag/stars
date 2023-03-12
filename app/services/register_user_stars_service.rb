@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-# Service to create {StarTrack} records of data returned from Github's API.
+# Service to create {StarTrack} records out of data returned from Github's API.
 class RegisterUserStarsService
   attr_reader :username, :items
 

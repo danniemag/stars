@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
-  resources :stars, only: :index
+  resources :star_tracks, only: :index
 end

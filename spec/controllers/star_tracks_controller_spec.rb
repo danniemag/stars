@@ -3,7 +3,7 @@
 require 'spec_helper'
 require 'rails_helper'
 
-RSpec.describe StarsController, type: :controller do
+RSpec.describe StarTracksController, type: :controller do
   subject(:go!) { get :index, params:, format: :json }
 
   describe 'GET :index' do
