@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class StarsController < ApplicationController
   before_action :no_user_found, if: -> { params[:username].blank? }
   before_action :sanitize_entry, if: -> { params[:username].present? }

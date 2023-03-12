@@ -97,8 +97,6 @@ GEM
     domain_name (0.5.20190701)
       unf (>= 0.0.5, < 1.0.0)
     erubi (1.12.0)
-    factory_bot (6.2.1)
-      activesupport (>= 5.0.0)
     globalid (1.1.0)
       activesupport (>= 5.0)
     http-accept (1.7.0)
@@ -202,6 +200,9 @@ GEM
       rspec-expectations (~> 3.9.0)
       rspec-mocks (~> 3.9.0)
       rspec-support (~> 3.9.0)
+    rspec-sidekiq (3.1.0)
+      rspec-core (~> 3.0, >= 3.0.0)
+      sidekiq (>= 2.4.0)
     rspec-support (3.9.4)
     rubocop (1.48.0)
       json (~> 2.3)
@@ -246,13 +247,13 @@ DEPENDENCIES
   capybara
   database_cleaner
   debug
-  factory_bot
   pg (~> 1.1)
   puma (~> 5.0)
   rails (~> 7.0.4)
   redis (~> 4.0)
   rest-client
   rspec-rails (~> 3.5)
+  rspec-sidekiq
   rubocop
   sidekiq
   tzinfo-data

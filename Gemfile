@@ -45,7 +45,6 @@ group :development, :test do
   gem 'capybara'
   gem 'database_cleaner'
   gem 'debug', platforms: %i[mri mingw x64_mingw]
-  gem 'factory_bot'
   gem 'rspec-rails', '~> 3.5'
   gem 'rubocop'
 end
@@ -55,3 +54,6 @@ group :development do
   # gem "spring"
 end
 
+group :test do
+  gem 'rspec-sidekiq'
+end
