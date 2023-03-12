@@ -17,7 +17,8 @@ _____________________
 - Make sure to have Sidekiq running: `bundle exec sidekiq`
 _______________________
 
-![WorkingDemo](https://github.com/danniemag/stars/blob/main/demo/working-demo.gif)
+### Working Demo
+![Download WorkingDemo](https://github.com/danniemag/stars/blob/main/demo/working-demo.gif)(https://s3.sa-east-1.amazonaws.com/daniellemagalhaes.com.br/stars-img/working-demo.mov
 
 _______________________
 
