@@ -51,9 +51,9 @@ _________________
 
 ##### Response:
 
+`STATUS: 200`
 ![](https://s3.sa-east-1.amazonaws.com/daniellemagalhaes.com.br/stars-img/1.png)
 
-`STATUS: 200`
 ```json
 {
   "success": true,
@@ -71,9 +71,10 @@ _________________
 ### Edge Cases:
 
 - Username parameter is blank
-  ![](https://s3.sa-east-1.amazonaws.com/daniellemagalhaes.com.br/stars-img/2.png)
+  `STATUS: 404`
 
-`STATUS: 404`
+- ![](https://s3.sa-east-1.amazonaws.com/daniellemagalhaes.com.br/stars-img/2.png)
+
 ```json
 {
   "success": false,
@@ -82,9 +83,10 @@ _________________
 ```
 
 - Abnormal username informed
+  `STATUS: 400`
+
   ![](https://s3.sa-east-1.amazonaws.com/daniellemagalhaes.com.br/stars-img/3.png)
 
-`STATUS: 400`
 ```json
 {
   "success": false,
@@ -100,9 +102,9 @@ Plus, according to Github's naming convention, usernames are allowed to contain 
 alphanumeric characters, dashes and underscores.
 ```
 
-- Inexisting user
+- Inexisting user  
+  `STATUS: 200`
 
-`STATUS: 200`
 ```json
 {
   "success": true,
@@ -118,9 +120,9 @@ So, although the endpoint returns a "success: true" message, case user does not 
 a RestClient::NotFound is raised, returning nil and aborting the call of the service.
 ```
 
-- Inexisting user
+- User has no repositories  
+  `STATUS: 200`
 
-`STATUS: 200`
 ```json
 {
   "success": true,
