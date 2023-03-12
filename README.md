@@ -17,6 +17,10 @@ _____________________
 - Make sure to have Sidekiq running: `bundle exec sidekiq`
 _______________________
 
+![WorkingDemo](https://github.com/danniemag/stars/blob/main/demos/working-demo.gif)
+
+_______________________
+
 ### Endpoint Overview
 
 | HTTP METHOD | PATH                    | USAGE                                                                                              |
