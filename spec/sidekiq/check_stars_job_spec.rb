@@ -3,7 +3,7 @@
 require 'spec_helper'
 require 'rails_helper'
 
-describe CheckStarsJob do
+RSpec.describe CheckStarsJob do
   describe 'run worker' do
     let(:go!) { described_class.perform_async(username) }
     let(:username) { 'danniemag' }
