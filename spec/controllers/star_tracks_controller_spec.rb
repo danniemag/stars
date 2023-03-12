@@ -56,7 +56,7 @@ RSpec.describe StarTracksController, type: :controller do
         end
 
         it 'returns a message' do
-          expect(body['message']).to eq('Abnormal user name')
+          expect(body['message']).to eq('Abnormal username')
         end
 
         it 'returns a bad_request status' do

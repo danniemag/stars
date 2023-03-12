@@ -20,7 +20,7 @@ class StarTracksController < ApplicationController
     # Prevent against injections and/or undesirable characters
     return if params[:username].index(/[^[:alnum:]&[-]&[_]]/).nil?
 
-    render_response(false, 'Abnormal user name', :bad_request)
+    render_response(false, 'Abnormal username', :bad_request)
   end
 
   def render_response(success, message, status = :ok)
