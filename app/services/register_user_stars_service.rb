@@ -31,10 +31,10 @@ class RegisterUserStarsService
 
     to_be_persisted = []
 
-    items.each do |r|
+    items.each do |it|
       to_be_persisted << { username:,
-                           repository_name: r['name'],
-                           star_count: r['stargazers_count'] }
+                           repository_name: it['name'],
+                           star_count: it['stargazers_count'] }
     end
 
     StarTrack.create(to_be_persisted)
