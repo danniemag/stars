@@ -18,7 +18,9 @@ _____________________
 _______________________
 
 ### Working Demo
-![Download WorkingDemo](https://github.com/danniemag/stars/blob/main/demo/working-demo.gif)
+![WorkingDemo](https://github.com/danniemag/stars/blob/main/demo/working-demo.gif)
+
+Download video:
 (https://s3.sa-east-1.amazonaws.com/daniellemagalhaes.com.br/stars-img/working-demo.mov)
 
 _______________________
