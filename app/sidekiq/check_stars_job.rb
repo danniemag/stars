@@ -6,11 +6,11 @@ class CheckStarsJob
   include Sidekiq::Job
   require 'rest-client'
 
-  def perform(user)
-    url = "https://api.github.com/users/#{user}/repos"
+  def perform(username)
+    url = "https://api.github.com/users/#{username}/repos"
     response = RestClient.get(url)
 
-    RegisterUserStarsService.new(user, JSON.parse(response)).call
+    RegisterUserStarsService.new(username, JSON.parse(response)).call
   rescue RestClient::NotFound
     nil
   end

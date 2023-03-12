@@ -1,11 +1,11 @@
 class StarsController < ApplicationController
-  before_action :no_user_found, if: -> { params[:user].blank? }
+  before_action :no_user_found, if: -> { params[:username].blank? }
   before_action :sanitize_entry, if: -> { params[:username].present? }
 
   def index
-    CheckStarsJob.perform_async(params[:user])
+    CheckStarsJob.perform_async(params[:username])
 
-    render_response(true, "Checking stars from user #{params[:user]}", :ok)
+    render_response(true, "Checking stars from user #{params[:username]}", :ok)
   end
 
   private

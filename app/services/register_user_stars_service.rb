@@ -2,7 +2,7 @@
 
 # Service to create {StarTrack} records of data returned from Github's API.
 class RegisterUserStarsService
-  attr_reader :user, :items
+  attr_reader :username, :items
 
   # Allow calling at the class level.
   # Initializes a new instance of the service class and {#call} calls it.
@@ -14,11 +14,11 @@ class RegisterUserStarsService
   end
 
   #
-  # @param user [String] The name of the user to be researched
+  # @param username [String] The username to be researched
   # @option items [Array] Content returned from Github's API
   #
-  def initialize(user, items)
-    @user = user
+  def initialize(username, items)
+    @username = username
     @items = items
   end
 
@@ -32,7 +32,7 @@ class RegisterUserStarsService
     to_be_persisted = []
 
     items.each do |r|
-      to_be_persisted << { username: user,
+      to_be_persisted << { username:,
                            repository_name: r['name'],
                            star_count: r['stargazers_count'] }
     end
