@@ -1,14 +1,10 @@
 class StarsController < ApplicationController
-  require 'rest-client'
-
   before_action :no_user_found, if: -> { params[:user].blank? }
 
   def index
-    url = "https://api.github.com/users/#{params[:user]}/repos"
-    response = RestClient.get(url)
+    CheckStarsJob.perform_async(params[:user])
 
-  rescue RestClient::NotFound
-    no_user_found
+    render_response(true, "Checking stars from user #{params[:user]}", :ok)
   end
 
   private
